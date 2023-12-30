@@ -4,6 +4,10 @@ Dallas Temperature IC Control Library Demo IC Control Library Demo
 
 Code uses [OneWire.h]
 
+## Dallas Temperature Control Library vs DFRobot
+
+We also used code from [DFRobot-DS18B20](https://github.com/jwilleke/DFRobot-DS18B20) and found the Dallas Temperature Control Library has more features and seems to be easier to use.
+
 ## We statred with the code
 
 [Arduino-Temperature-Control-Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
