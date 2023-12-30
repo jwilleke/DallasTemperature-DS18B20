@@ -148,4 +148,5 @@ void loop(void)
     }
     // else ghost device! Check your power requirements and cabling
   }
+  delay(5000);
 }
