@@ -14,6 +14,17 @@ int numberOfDevices; // Number of temperature devices found
 
 DeviceAddress tempDeviceAddress; // We'll use this variable to store a found device address
 
+/**
+ *
+ */
+void printPowerAddress(DeviceAddress deviceAddress)
+{
+  Serial.println("Device Address: ");
+  Serial.print("Power = parasite: ");
+  Serial.println(sensors.readPowerSupply(deviceAddress));
+  Serial.println();
+}
+
 // function to print a device address
 void printAddress(DeviceAddress deviceAddress)
 {
@@ -71,10 +82,15 @@ void setup(void)
   // report parasite power requirements
   Serial.print("Parasite power is: ");
   if (sensors.isParasitePowerMode())
+  {
     Serial.println("ON");
+    // if isParasitePowerMode then check the power inside the probe
+    printPowerAddress(tempDeviceAddress);
+  }
   else
+  {
     Serial.println("OFF");
-
+  }
   // Loop through each device, print out address
   for (int i = 0; i < numberOfDevices; i++)
   {
@@ -110,7 +126,7 @@ void setup(void)
 /**
  * request to all devices on the bus
  * call sensors.requestTemperatures() to issue a global temperature
-*/
+ */
 void loop(void)
 {
   // request to all devices on the bus
