@@ -18,7 +18,7 @@ We used this [Gravity: Waterproof DS18B20 Temperature Sensor Kit](https://www.df
 
 ## I statred with the code
 
-[SKU:DFR0198 Waterproof DS18B20 Sensor Wiki](https://wiki.dfrobot.com/Waterproof_DS18B20_Digital_Temperature_Sensor__SKU_DFR0198_) and added few things like 
+[SKU:DFR0198 Waterproof DS18B20 Sensor Wiki](https://wiki.dfrobot.com/Waterproof_DS18B20_Digital_Temperature_Sensor__SKU_DFR0198_) and added few things like
 getTempF(celsius) tp get Fahrenheit from Celsius value.
 
 ## Arduino can not deal with high precision numbers
@@ -28,10 +28,6 @@ The float data type has only 6-7 decimal digits of precision. That means the tot
 We have been aunable to get any Celsius to Fahrenheit calculations to be accurate.
 
 The Dallas Temperature Control Library does return much more accurate results.
-
-## Dallas Temperature Control Library vs DFRobot
-
-Dallas Temperature Control Library has more features and seems to be easier to use.
 
 ## Expected Output
 
